@@ -1,0 +1,421 @@
+body {
+  background-color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+header {
+  position: relative;
+}
+
+header .site-logo {
+  z-index: 40;
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 25px;
+}
+
+header nav {
+  width: 100%;
+  z-index: 30;
+  background-color: black;
+  position: fixed;
+  top: -300px;
+  text-align: center;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+header nav ul {
+  margin-top: 65px;
+  margin-bottom: 30px;
+}
+
+header nav ul li {
+  margin-top: 15px;
+}
+
+header nav ul li a {
+  display: block;
+}
+
+header nav.active {
+  top: 0;
+  display: block;
+}
+
+header .humberger {
+  z-index: 40;
+  display: none;
+  top: 25px;
+  right: 20px;
+  position: fixed;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+}
+
+header .humberger span {
+  background-color: #fff;
+  height: 1px;
+  width: 30px;
+  position: absolute;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+header .humberger span:nth-child(1) {
+  top: 11px;
+}
+
+header .humberger span:nth-child(2) {
+  top: 21px;
+}
+
+header .humberger span:nth-child(3) {
+  top: 31px;
+}
+
+header .humberger.open span:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translate(0px, 8px);
+          transform: rotate(-45deg) translate(0px, 8px);
+}
+
+header .humberger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+header .humberger.open span:nth-child(3) {
+  -webkit-transform: rotate(45deg) translate(-5px, -14px);
+          transform: rotate(45deg) translate(-5px, -14px);
+}
+
+main {
+  color: #fff;
+  text-align: center;
+}
+
+main .top-words h1 {
+  font-size: 5rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+main .information {
+  margin-bottom: 140px;
+}
+
+main .information .information-contents h2 {
+  font-size: 2.5rem;
+}
+
+main .information .information-contents p {
+  margin: 0;
+}
+
+main .section-title {
+  margin-bottom: 30px;
+}
+
+main .section-title h2 {
+  text-decoration: underline;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+main .background-flower {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .background-flower img {
+  width: 33.3%;
+  height: 100vh;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .side-btn .s-b-contents {
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  position: fixed;
+  right: -145px;
+  bottom: 300px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  border: 1px solid #fff;
+}
+
+main .side-btn .s-b-contents a {
+  width: 165px;
+  font-size: 0.875rem;
+  display: inline-block;
+  letter-spacing: 0.1em;
+  padding: 15px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+main .side-btn .s-b-contents a:hover {
+  opacity: 0.7;
+}
+
+main .side-btn .s-b-contents a.selected {
+  border-left: 1px solid #fff;
+}
+
+main .gallery {
+  margin-bottom: 480px;
+}
+
+main .gallery .gallery-contents ul li {
+  margin-bottom: 60px;
+  opacity: 0;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+main .gallery .gallery-contents ul li.show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+main .gallery .gallery-contents ul li img {
+  width: 46%;
+}
+
+main .gallery .gallery-contents ul li.left {
+  text-align: left;
+}
+
+main .gallery .gallery-contents ul li.right {
+  text-align: right;
+}
+
+main .access {
+  position: relative;
+  z-index: 20;
+  margin-bottom: 480px;
+}
+
+main .access .access-contents h3 {
+  font-size: 1.5rem;
+}
+
+main .access .access-contents p {
+  font-weight: 100;
+}
+
+main .access .access-contents p span {
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+
+main .access .access-contents .btn {
+  display: inline-block;
+  border: 1px solid #fff;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .access .access-contents .btn:hover {
+  cursor: pointer;
+  background-color: black;
+}
+
+main .access .access-contents .btn p {
+  padding: 0 70px;
+}
+
+main .contact {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 180px;
+  z-index: 20;
+}
+
+main .contact a {
+  display: block;
+  width: 400px;
+  position: relative;
+  border: 1px solid #fff;
+  padding: 30px 0px;
+  margin: 20px auto 30px auto;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+main .contact a:hover {
+  opacity: 0.7;
+}
+
+main .contact a:hover::before, main .contact a:hover::after {
+  right: -50px;
+}
+
+main .contact a::before {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 1px;
+  top: 50%;
+  right: -40px;
+  background-color: #fff;
+}
+
+main .contact a::after {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  content: '';
+  width: 30px;
+  position: absolute;
+  height: 1px;
+  right: -40px;
+  top: 44%;
+  background-color: #fff;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+main .bg {
+  background-image: url(https://code-step.com/demo/html/gallery/img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+}
+
+footer {
+  color: #fff;
+  border-top: 1px solid #fff;
+  padding: 60px 30px;
+}
+
+footer p {
+  font-size: 0.5rem;
+  margin: 5px 0;
+}
+
+footer span {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+footer .sns {
+  margin-top: 35px;
+  font-size: 0.5rem;
+}
+
+footer .sns a {
+  margin-right: 10px;
+}
+
+footer .footer-bottom {
+  position: relative;
+  font-size: 0.5rem;
+}
+
+footer .footer-bottom ul {
+  margin: 0;
+  top: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-bottom ul li {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    margin-bottom: 280px;
+  }
+  .side-btn {
+    display: none;
+  }
+  main .top-words h1 {
+    font-size: 2.5rem;
+  }
+  main .section-title h2 {
+    font-size: 1.5rem;
+  }
+  main .information .information-contents h2 {
+    font-size: 1.5rem;
+  }
+  main .information .information-contents p {
+    font-size: 1rem;
+  }
+  main .gallery {
+    margin-bottom: 280px;
+  }
+  main .gallery .gallery-contents ul li {
+    margin-bottom: 30px;
+  }
+  main .gallery .gallery-contents ul li img {
+    width: 100%;
+  }
+  main .access {
+    margin-bottom: 280px;
+  }
+  main .contact a {
+    width: 85%;
+  }
+  main .contact a::after, main .contact a::before {
+    content: none;
+  }
+  footer .footer-bottom ul {
+    margin-top: 20px;
+    left: 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

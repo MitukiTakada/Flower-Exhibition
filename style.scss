@@ -1,0 +1,367 @@
+body {
+  background-color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+ul {
+  padding-left: 0;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+li {
+  list-style: none;
+}
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+header {
+  position: relative;
+  & .site-logo {
+    z-index: 40;
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 25px;
+  }
+  & nav {
+    width: 100%;
+    z-index: 30;
+    background-color: black;
+    position: fixed;
+    top: -300px;
+    text-align: center;
+    transition: 0.7s;
+    & ul {
+      margin-top: 65px;
+      margin-bottom: 30px;
+      & li {
+        margin-top: 15px;
+        & a {
+          display: block;
+        }
+      }
+    }
+    &.active {
+      top: 0;
+      display: block;
+    }
+  }
+  & .humberger {
+    z-index: 40;
+    display: none;
+    top: 25px;
+    right: 20px;
+    position: fixed;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    & span {
+      background-color: #fff;
+      height: 1px;
+      width: 30px;
+      position: absolute;
+      transition: 0.7s;
+      &:nth-child(1) {
+        top: 11px;
+      }
+      &:nth-child(2) {
+        top: 21px;
+      }
+      &:nth-child(3) {
+        top: 31px;
+      }
+    }
+    &.open {
+      & span {
+        &:nth-child(1) {
+          transform: rotate(-45deg) translate(0px, 8px);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: rotate(45deg) translate(-5px, -14px);
+        }
+      }
+    }
+  }
+}
+main {
+  color: #fff;
+  text-align: center;
+  & .top-words {
+    & h1 {
+      font-size: 5rem;
+      font-weight: 300;
+      letter-spacing: 3px;
+    }
+
+  }
+  & .information {
+    margin-bottom: 140px;
+    & .information-contents {
+      & h2 {
+        font-size: 2.5rem;
+      }
+      & p {
+        margin: 0;
+      }
+    }
+  }
+  & .section-title {
+    margin-bottom: 30px;
+    & h2 {
+      text-decoration: underline;
+      font-size: 3rem;
+      font-weight: 300;
+      letter-spacing: 3px;
+    }
+  }
+  & .background-flower {
+    display: flex;
+    overflow-x: hidden;
+    justify-content: center;
+    & img {
+      width: 33.3%;
+      height: 100vh;
+      flex-shrink: 0;
+      object-fit: cover;
+    }
+  }
+  & .side-btn {
+    & .s-b-contents {
+      transition: all ease 0.5s;
+      position: fixed;
+      right: -145px;
+      bottom: 300px;
+      transform: rotate(-90deg);
+      border: 1px solid #fff;
+      & a {
+        width: 165px;
+        font-size: 0.875rem;
+        display: inline-block;
+        letter-spacing: 0.1em;
+        padding: 15px 0;
+        transition: 0.3s;
+        &:hover {
+          opacity: 0.7;
+        }
+        &.selected {
+          border-left: 1px solid #fff;
+        }
+      }
+    }
+  }
+  & .gallery {
+    margin-bottom: 480px;
+    & .gallery-contents {
+      & ul {
+        & li {
+          margin-bottom: 60px;
+          opacity: 0;
+          transform: translateY(10px);
+          transition: 0.7s;
+          &.show {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          & img {
+            width: 46%;
+          }
+          &.left {
+            text-align: left;
+          }
+          &.right {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  & .access {
+    position: relative;
+    z-index: 20;
+    margin-bottom: 480px;
+    & .access-contents {
+      & h3 {
+        font-size: 1.5rem;
+      }
+      & p {
+        font-weight: 100;
+        & span {
+          font-size: 1.15rem;
+          font-weight: 400;
+        }
+      }
+      & .btn {
+        display: inline-block;
+        border: 1px solid #fff;
+        transition: 1s;
+        &:hover {
+          cursor: pointer;
+          background-color: black;
+        }
+        & p {
+          padding: 0 70px;
+        }
+      }
+    }
+  }
+  & .contact {
+    flex-direction: column;
+    margin-bottom: 180px;
+    z-index: 20;
+    & a {
+      display: block;
+      width: 400px;
+      position: relative;
+      border: 1px solid #fff;
+      padding: 30px 0px;
+      margin: 20px auto 30px auto;
+      transition: 1s;
+      &:hover {
+        opacity: 0.7;
+        &::before, &::after {
+          right: -50px;
+        }
+      }
+      &::before {
+        transition: 0.6s;
+        content: '';
+        position: absolute;
+        width: 120px;
+        height: 1px;
+        top: 50%;
+        right: -40px;
+        background-color: #fff;
+      }
+      &::after {
+        transition: 0.6s;
+        content: '';
+        width: 30px;
+        position: absolute;
+        height: 1px;
+        right: -40px;
+        top: 44%;
+        background-color: #fff;
+        transform: rotate(20deg);
+      }
+    }
+  }
+  & .bg {
+    background-image: url(https://code-step.com/demo/html/gallery/img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:  10;
+    display: none;
+  }
+}
+footer {
+  color: #fff;
+  border-top: 1px solid #fff;
+  padding: 60px 30px;
+  & p {
+    font-size: 0.5rem;
+    margin: 5px 0;
+  }
+  & span {
+    font-size: 0.75rem;
+    font-weight: 400;
+  }
+  & .sns {
+    margin-top: 35px;
+    font-size: 0.5rem;
+    & a {
+      margin-right: 10px;
+    }
+  }
+  & .footer-bottom {
+    position: relative;
+    font-size: 0.5rem;
+    & ul {
+      margin: 0;
+      top: 0;
+      align-items: center;
+      position: absolute;
+      right: 15px;
+      display: flex;
+      & li {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .wrapper {
+    margin-bottom: 280px;
+  }
+  .side-btn {
+    display: none;
+  }
+  main {
+    & .top-words {
+      & h1 {
+        font-size: 2.5rem;
+      }
+    }
+    & .section-title {
+      & h2 {
+        font-size: 1.5rem;
+      }
+    }
+    & .information {
+      & .information-contents {
+        & h2 {
+          font-size: 1.5rem;
+        }
+        & p {
+          font-size: 1rem;
+        }
+      }
+    }
+    & .gallery {
+      margin-bottom: 280px;
+      & .gallery-contents {
+        & ul {
+          & li {
+            margin-bottom: 30px;
+            & img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    & .access {
+      margin-bottom: 280px;
+    }
+    & .contact {
+      & a {
+        width: 85%;
+        &::after, &::before {
+          content: none;
+        }
+      }
+    }
+  }
+  footer {
+    & .footer-bottom {
+      & ul {
+        margin-top: 20px;
+        left: 0px;
+      }
+    }
+  }
+}
